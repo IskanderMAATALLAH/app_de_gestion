@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5b04f005-88dd-411a-bfd7-05bbbab1b8a9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="31"/>
+	<queryString>
+		<![CDATA[select * from personnel;]]>
+	</queryString>
+	<field name="NumContrat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Prenom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateNaiss" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Téléphone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateDebCon" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Durée" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Salaire" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPoste" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="520" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="22" width="195" height="20" uuid="223745c9-d5ef-4b79-8083-9e62f49b82d3"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 04 : Période d'essai ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="52" width="555" height="86" uuid="82f7bebe-21c2-424c-bba7-2aea2950786a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Dés son recrutement ,M/Mme/Mlle                                                                 est soumis à une période d'essai de          Mois ,au terme de lequelle il/elle sera procédée à :
+-Soit sa confirmation dans son poste de travail 
+-Soit à la prolongation de la période d'essai pour une égale el meme durée
+-Soit à la cessation de sa relation de travail avec la société]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="151" width="195" height="21" uuid="e33d25d5-6264-4b6f-ac75-d3c2984d22bf"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 05 : Cas de résiliation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="184" width="555" height="114" uuid="2ccfa0ba-1078-4805-83e0-f84fc64b5c65"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Le présent contrat peut etre résilié dans les cas suivants :
+
+-D'un commun accord entre les deux parties
+-Démission
+-Cas de fautes eet manquements graves
+
+Dans les deux premiers cas ,l'intéressé est tenu d'observer un délai de préavis de 30 jours]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="313" width="195" height="21" uuid="a5eedde3-8544-4885-be4d-5af02b1b18ca"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 06 : Gestion des litiges ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="407" width="195" height="21" uuid="befda53e-82a4-4d49-b2aa-74a87d5de09d"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 07 : Entrée en vigueur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="345" width="555" height="62" uuid="be8008ab-8ff2-4551-93f7-dd8a84763800"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[En cas de différents qui pourrai naitre de l'exécution des dispositions du présent contrat , un règelement à l'aimable sera convenu entre les deux parties . en cas d'imposibilité de parvenir à un réglement amaible ,le litige soumis à l'arbitrage du tribunal d'Annaba]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="442" width="555" height="29" uuid="ab49f754-be6d-487b-9a95-7ea9ac29355d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Le présent contrat entrera en vigueur à dater de sa signature par les deux partie]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="189" y="52" width="89" height="20" uuid="ede7046a-09ec-4e42-aef9-4443925229e4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NumContrat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="52" width="100" height="20" uuid="4a6f1e5d-a916-4afc-9821-150fc27a7991"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="70" width="16" height="20" uuid="e9c8eeb4-69e7-4ab0-9163-1c41660068bc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Durée}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

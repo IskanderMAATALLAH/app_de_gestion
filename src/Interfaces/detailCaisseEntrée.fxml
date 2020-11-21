@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="250.0" style="-fx-background-color: #D9E4F2; -fx-border-color: #627FA1; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.DetailCaisseEntrée">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="250.0">
+         <children>
+            <Label fx:id="msgErreur" textAlignment="CENTER" textFill="#e11919">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="32.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="libCaisse" prefHeight="27.0" prefWidth="113.0" text="Num CAISSE" textFill="#23488d">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="70.0" top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Circle fx:id="pointOuvFer" fill="#dd0f0f" radius="8.0" stroke="BLACK" strokeType="INSIDE">
+                     <HBox.margin>
+                        <Insets left="10.0" top="12.0" />
+                     </HBox.margin>
+                  </Circle>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <JFXButton fx:id="buttOuvFer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ouvFermer" prefWidth="237.0" style="-fx-background-color: ea4444;" text="Ouvrir/Fermer" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="250.0" style="-fx-background-color: black;">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <JFXTextField fx:id="t100" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#TicketVerif" prefWidth="235.0" promptText="-T100-" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="8.0" top="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="t120" labelFloat="true" onKeyTyped="#TicketVerif" prefHeight="25.0" prefWidth="115.0" promptText="-T120-" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="t150" labelFloat="true" onKeyTyped="#TicketVerif" prefHeight="25.0" prefWidth="115.0" promptText="-T150-" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="t240" labelFloat="true" onKeyTyped="#TicketVerif" prefHeight="25.0" prefWidth="115.0" promptText="-T240-" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="t300" labelFloat="true" onKeyTyped="#TicketVerif" prefHeight="25.0" prefWidth="115.0" promptText="-T300-" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="t400" labelFloat="true" onKeyTyped="#TicketVerif" prefHeight="25.0" prefWidth="115.0" promptText="-T400-" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="f1000" labelFloat="true" onKeyTyped="#TicketVerif" prefHeight="25.0" prefWidth="115.0" promptText="-F1000-" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="f2000" labelFloat="true" onKeyTyped="#TicketVerif" prefHeight="25.0" prefWidth="115.0" promptText="-F2000-" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="f3000" labelFloat="true" onKeyTyped="#TicketVerif" prefHeight="25.0" prefWidth="115.0" promptText="-F3000-" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXTextField fx:id="monnaie" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#MonnaieVerif" prefWidth="235.0" promptText="-Monnaie (D.A.)-" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="8.0" top="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="recette" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#MonnaieVerif" prefWidth="235.0" promptText="-Recette (D.A.)-" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="8.0" top="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXButton fx:id="btnValider" buttonType="RAISED" onAction="#buttValider" style="-fx-background-color: #46ae63;" text="Valider" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icones/valider.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</Pane>

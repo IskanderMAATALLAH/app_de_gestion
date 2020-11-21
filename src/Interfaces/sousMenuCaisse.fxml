@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.InterCaisse">
+   <children>
+      <VBox prefHeight="580.0" prefWidth="780.0">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="780.0" spacing="80.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <JFXButton buttonType="RAISED" prefWidth="100.0" style="-fx-background-color: #3965b8;" text="Entrées" textFill="#f6f7f8">
+                     <HBox.margin>
+                        <Insets left="250.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" prefWidth="100.0" style="-fx-background-color: #3965b8;" text="Sorties" textFill="#f6f7f8">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Pane fx:id="paneSousMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="780.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

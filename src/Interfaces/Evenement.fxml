@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.Evenement">
+   <children>
+      <VBox prefHeight="279.0" prefWidth="267.0" spacing="15.0" style="-fx-border-color: grey;">
+         <children>
+            <JFXTextField fx:id="intitule" minWidth="-Infinity" promptText="Intitulé de l'evenement">
+               <VBox.margin>
+                  <Insets left="40.0" right="60.0" top="40.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXDatePicker fx:id="datedeb" minWidth="-Infinity" prefHeight="25.0" prefWidth="189.0" promptText="Date de debut">
+               <VBox.margin>
+                  <Insets left="40.0" right="60.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXDatePicker fx:id="datefin" minWidth="-Infinity" prefHeight="25.0" prefWidth="187.0" promptText="Date de fin">
+               <VBox.margin>
+                  <Insets left="40.0" right="60.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <HBox prefHeight="29.0" prefWidth="272.0" spacing="15.0">
+               <children>
+                  <JFXButton fx:id="ajout" buttonType="RAISED" onAction="#ajouter" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="modif" buttonType="RAISED" disable="true" onAction="#modifier" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <VBox layoutY="279.0" prefHeight="242.0" prefWidth="291.0" spacing="15.0" style="-fx-border-color: grey;">
+         <children>
+            <Label text="Recherche" textFill="#324d6e" underline="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="95.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <JFXTextField fx:id="ideven" prefHeight="25.0" prefWidth="174.0" promptText="Id evenement">
+               <VBox.margin>
+                  <Insets left="40.0" right="60.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXDatePicker fx:id="date1" prefHeight="25.0" prefWidth="187.0" promptText="De">
+               <VBox.margin>
+                  <Insets left="40.0" right="60.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXDatePicker fx:id="date2" prefHeight="25.0" prefWidth="187.0" promptText="à">
+               <VBox.margin>
+                  <Insets left="40.0" right="60.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXButton buttonType="RAISED" onAction="#recherche" style="-fx-background-color: green;" text="Rechercher" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="90.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <TableView fx:id="tableau" layoutX="291.0" layoutY="30.0" onMouseClicked="#showOnClick" prefHeight="491.0" prefWidth="488.0">
+         <columns>
+            <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="intitul" prefWidth="192.0" text="Intitulé" />
+            <TableColumn fx:id="da1" prefWidth="193.0" text="Debut" />
+            <TableColumn fx:id="da2" prefWidth="75.0" text="Fin" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="296.0" layoutY="2.0" text="Liste d'evenements" textFill="#324d6e" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="780.0" style="-fx-background-color: EAEDF1;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.RendezvousController">
+   <children>
+      <VBox prefHeight="580.0" prefWidth="273.0" spacing="15.0" style="-fx-background-color: EAEDF1;">
+         <children>
+            <Text fill="#293989" strokeType="OUTSIDE" strokeWidth="0.0" text="Rendez-Vous" underline="true">
+               <VBox.margin>
+                  <Insets left="80.0" top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <JFXDatePicker fx:id="date" defaultColor="#293989" prefHeight="25.0" prefWidth="260.0" promptText="-Date(jj/mm/aaaa)-" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXTimePicker fx:id="hour" defaultColor="#293989" prefHeight="25.0" prefWidth="260.0" promptText="-Heure(HH:MM PM/AM)-" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXTimePicker>
+            <JFXTextField fx:id="lieu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#Contrainte" prefHeight="25.0" prefWidth="255.0" promptText="-Lieu-" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="avec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#Contrainte" prefHeight="25.0" prefWidth="255.0" promptText="-Avec-" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox prefHeight="30.0" prefWidth="273.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="ajout" buttonType="RAISED" onAction="#ajouter" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #46ae63;" text="Ajouter" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="modif" buttonType="RAISED" disable="true" onAction="#Modifier" style="-fx-background-color: #3965b8;" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="Supp" buttonType="RAISED" disable="true" onAction="#Supprimer" style="-fx-background-color: ea4444;" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Separator maxWidth="-Infinity" minHeight="-Infinity" prefHeight="5.0" prefWidth="273.0" style="-fx-background-color: black;" />
+            <Text fill="#293989" strokeType="OUTSIDE" strokeWidth="0.0" text="Recherche" underline="true">
+               <VBox.margin>
+                  <Insets left="100.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="nomAvec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="255.0" promptText="-Avec-" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXDatePicker fx:id="dateDu" defaultColor="#293989" prefHeight="25.0" prefWidth="260.0" promptText="-Du(jj/mm/aaaa)-" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXDatePicker fx:id="dateAu" defaultColor="#293989" prefHeight="25.0" prefWidth="260.0" promptText="-Au(jj/mm/aaaa)-" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <HBox spacing="20.0">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton buttonType="RAISED" maxHeight="-Infinity" minHeight="-Infinity" onAction="#rechAction" prefHeight="30.0" style="-fx-background-color: #40A497;" text="Rechercher" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icones/rechercher.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" maxHeight="-Infinity" minHeight="-Infinity" onAction="#ActualiserRdv" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icones/actualiser.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView fx:id="tableau" layoutX="273.0" layoutY="32.0" onMouseClicked="#showOnClick" prefHeight="548.0" prefWidth="507.0">
+        <columns>
+            <TableColumn fx:id="num" prefWidth="94.0" text="Num" />
+          <TableColumn fx:id="datee" prefWidth="108.0" text="Date" />
+            <TableColumn fx:id="heurre" prefWidth="84.0" text="Heure" />
+            <TableColumn fx:id="llieu" prefWidth="75.0" text="Lieu" />
+            <TableColumn fx:id="avecc" prefWidth="75.0" text="Avec" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="273.0" layoutY="4.0" text="Rendez-vous :" textFill="#324d6e" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

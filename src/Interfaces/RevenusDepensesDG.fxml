@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.RevenusDepensesDGController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="780.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Factures:" textFill="#2b4586" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="tabFacture" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="nomF" prefWidth="75.0" text="Fournisseur" />
+                        <TableColumn fx:id="nomP" prefWidth="75.0" text="Produit" />
+                        <TableColumn fx:id="date_fact" prefWidth="75.0" text="Date" />
+                        <TableColumn fx:id="prixUnit" prefWidth="85.0" text="Prix Unit.(DA)" />
+                        <TableColumn fx:id="qte" prefWidth="35.0" text="Qte" />
+                        <TableColumn fx:id="monTot" prefWidth="90.0" text="Mont.Tot(DA)" />
+                        <TableColumn fx:id="rem" prefWidth="50.0" text="Rem(%)" />
+                        <TableColumn fx:id="autreCharge" prefWidth="50.0" text="A.C(DA)" />
+                        <TableColumn fx:id="montNet" prefWidth="85.0" text="Mont.Net(DA)" />
+                        <TableColumn fx:id="vers" prefWidth="70.0" text="Vers(DA)" />
+                        <TableColumn fx:id="montRest" prefWidth="90.0" text="Mont.Rest(DA)" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <HBox prefHeight="320.0" prefWidth="780.0">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Revenus:" textFill="#2b4586" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView prefHeight="320.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="90.0" text="Date" />
+                              <TableColumn prefWidth="110.0" text="Recette(DA)" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="320.0" prefWidth="581.0">
+                     <children>
+                        <Label text="Avance de paiement:" textFill="#2b4586" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView prefHeight="320.0" prefWidth="565.0">
+                           <columns>
+                              <TableColumn prefWidth="90.0" text="N° Contrat" />
+                              <TableColumn prefWidth="170.0" text="Prénom" />
+                              <TableColumn prefWidth="160.0" text="Nom" />
+                              <TableColumn prefWidth="145.0" text="Montant(DA)" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.MissionEtCongé">
+   <children>
+      <Separator layoutX="244.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="509.0" prefWidth="2.0" />
+      <Separator layoutX="244.0" layoutY="271.0" prefHeight="3.0" prefWidth="530.0" />
+      <ScrollPane layoutX="249.0" layoutY="252.0" prefHeight="266.0" prefWidth="530.0">
+         <content>
+            <TableView fx:id="TabMission" onMouseClicked="#GetMission" prefHeight="304.0" prefWidth="945.0">
+               <columns>
+                  <TableColumn fx:id="NMission" prefWidth="114.0" text="Mission" />
+                  <TableColumn fx:id="NMContrat" prefWidth="105.0" text="N°Contrat" />
+                  <TableColumn fx:id="LieuM" prefWidth="100.0" text="Lieu" />
+                  <TableColumn fx:id="Date" prefWidth="79.0" text="Date début" />
+                  <TableColumn fx:id="DateF" prefWidth="75.0" text="Date fin" />
+                  <TableColumn fx:id="ObjetM" prefWidth="130.3333740234375" text="Objet" />
+                  <TableColumn fx:id="MoyenM" prefWidth="78.6666259765625" text="Moyen" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="249.0" prefHeight="252.0" prefWidth="530.0">
+         <content>
+            <TableView fx:id="TabCongé" onMouseClicked="#GetCongé" prefHeight="262.0" prefWidth="947.0">
+               <columns>
+                  <TableColumn fx:id="NCongé" prefWidth="75.0" text="N° Congé" />
+                  <TableColumn fx:id="NContrat" prefWidth="75.0" text="N° Contrat" />
+                  <TableColumn fx:id="AdresseC" prefWidth="75.0" text="Adresse" />
+                  <TableColumn fx:id="DateDebut" prefWidth="75.0" text="Date Debut" />
+                  <TableColumn fx:id="TitreCon" prefWidth="75.0" text="Titre d'exercice" />
+                  <TableColumn fx:id="DateR" prefWidth="75.0" text="Date retour" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Pane fx:id="paneee" layoutY="1.0" prefHeight="520.0" prefWidth="249.0" style="-fx-background-color: EAEDF1;">
+         <children>
+            <VBox fx:id="PaneChange" prefHeight="520.0" prefWidth="247.0" spacing="15.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <HBox prefHeight="36.0" prefWidth="247.0" spacing="10.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXRadioButton fx:id="Cong" onAction="#Congé" style="-fx-background-color: EAEDF1;" text="Congé">
+                           <HBox.margin>
+                              <Insets left="40.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="mission" onAction="#Mission" style="-fx-background-color: EAEDF1;" text="Mission">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </JFXRadioButton>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="Num" onKeyTyped="#NumContrainte" promptText="Numéro congé" style="-fx-background-color: EAEDF1;">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="Personnel" editable="true" prefHeight="25.0" prefWidth="321.0" promptText="Contrat" style="-fx-background-color: EAEDF1;">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="Adresse" promptText="adresse" style="-fx-background-color: EAEDF1;">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXDatePicker fx:id="DateDeb" prefHeight="25.0" prefWidth="280.0" promptText="Date debut" style="-fx-background-color: EAEDF1;">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </JFXDatePicker>
+                  <JFXDatePicker fx:id="DateFin" promptText="Date retour" style="-fx-background-color: EAEDF1;">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </JFXDatePicker>
+                  <JFXTextField fx:id="Titre" promptText="Titre de l'exercice" style="-fx-background-color: EAEDF1;">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="Objet" promptText="Objet" style="-fx-background-color: EAEDF1;">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="Moyen" promptText="Moyen" style="-fx-background-color: EAEDF1;">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <HBox prefHeight="34.0" prefWidth="262.0" spacing="20.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton fx:id="ButtValide" buttonType="RAISED" disable="true" onAction="#Valide" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: green;" text="Valider" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="1.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="Modif" buttonType="RAISED" disable="true" onAction="#Modifier" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE" />
+                        <JFXButton fx:id="ButtSupp" disable="true" onAction="#SuppCongé" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

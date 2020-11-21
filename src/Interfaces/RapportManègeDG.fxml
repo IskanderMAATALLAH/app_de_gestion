@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.RapportManègeDG">
+   <children>
+      <HBox prefHeight="98.0" prefWidth="420.0">
+         <children>
+            <Label fx:id="NomManége" text="Nom Manége" textFill="#0a14ab">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="130.0" top="30.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="35.0" prefWidth="420.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="Date" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="261.13671875">
+               <HBox.margin>
+                  <Insets left="10.0" top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="35.0" prefWidth="420.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Agent intervenant :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="Agent" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="219.13671875">
+               <HBox.margin>
+                  <Insets left="10.0" top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.0" prefWidth="421.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nature de l'intervention effectuée :" wrappingWidth="214.6416015625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="Nature" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="195.13671875">
+               <HBox.margin>
+                  <Insets left="10.0" top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="35.0" prefWidth="420.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PDR Consom :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="PDR" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="203.13671875">
+               <HBox.margin>
+                  <Insets left="10.0" top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="35.0" prefWidth="420.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Card.Lubrif :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="Carb" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="298.13671875">
+               <HBox.margin>
+                  <Insets left="10.0" top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="35.0" prefWidth="420.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Horaires :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="horaires" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="267.13671875">
+               <HBox.margin>
+                  <Insets left="10.0" top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <Pane prefHeight="44.0" prefWidth="420.0">
+         <children>
+            <ImageView fx:id="next" fitHeight="40.0" fitWidth="40.0" layoutX="370.0" layoutY="1.0" onMouseClicked="#suiv">
+               <image>
+                  <Image url="@../Icones/icons8-droite-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Previous" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="1.0" onMouseClicked="#prec" rotate="180.0">
+               <image>
+                  <Image url="@../Icones/icons8-droite-64.png" />
+               </image>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Pane>
+   </children>
+</VBox>

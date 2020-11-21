@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.Paiement">
+   <children>
+      <Pane prefHeight="495.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="495.0" prefWidth="600.0">
+               <children>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #AAAFAE;">
+                     <children>
+                        <Label text="Paiement" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#fermer" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="485.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../Icones/fermer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <Label text="Table de journées travaillées" textFill="#293989" underline="true">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="165.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="30.0" prefWidth="600.0">
+                     <children>
+                        <JFXComboBox fx:id="cbMoisAnnée" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="160.0" promptText="-Mois/Année-" visibleRowCount="12">
+                           <HBox.margin>
+                              <Insets left="110.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXButton buttonType="RAISED" onAction="#rechAction" style="-fx-background-color: #40A497;" text="Rechercher" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icones/rechercher.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#actualiserAction" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icones/actualiser.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="0.0" text="Mois:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="moisAnnée" maxHeight="-Infinity" minHeight="-Infinity">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="600.0" style="-fx-background-color: black;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <TableView fx:id="tabPaiement" prefHeight="351.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="numContrat" prefWidth="75.0" text="N° Contrat" />
+                      <TableColumn fx:id="firstName" prefWidth="130.0" text="Prénom" />
+                        <TableColumn fx:id="name" prefWidth="130.0" text="Nom" />
+                        <TableColumn fx:id="nbJr" prefWidth="110.0" text="Nbr. de journées" />
+                        <TableColumn fx:id="avancePaie" prefWidth="155.0" text="Avance de paiement (D.A.)" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

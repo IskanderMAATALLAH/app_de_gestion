@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb6c9eb7-e322-4401-8caa-6c38fcb66573">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="207"/>
+	<queryString>
+		<![CDATA[select * from mission,personnel,poste where NumContrat =IdPerso and personnel.IdPoste = poste.IdPoste;]]>
+	</queryString>
+	<field name="NumMission" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Lieu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateDeb" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datefin" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Objet" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Moyen" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPerso" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NumContrat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Prenom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateNaiss" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Téléphone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateDebCon" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Durée" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Salaire" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPoste" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Libelle" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="164" splitType="Stretch">
+			<staticText>
+				<reportElement x="295" y="0" width="260" height="34" forecolor="#6666FF" uuid="2f8cff9c-2866-487c-92ed-6a1ed349c1d9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Maiandra GD" size="14"/>
+				</textElement>
+				<text><![CDATA[ Parc d'attractions Sidi Achour ANNABA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="103" width="83" height="20" uuid="eb08b8ba-e7ea-46b7-8e9d-46bb528612a4"/>
+				<textElement>
+					<font size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ref:F.L/DG/N° :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="46" width="517" height="20" forecolor="#FF0099" uuid="3755f3dc-c922-451f-a90d-108b88c0c45d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ Capital social :30.666.000.00 Da-N° RC N° 23/00-0363195B01 - Phones :0560 042 692 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="0" width="133" height="34" forecolor="#3333FF" uuid="f2b623ed-274a-4ab3-982d-cf99eba03342"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Maiandra GD" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Spa FAROUK]]></text>
+			</staticText>
+			<image>
+				<reportElement x="256" y="0" width="32" height="34" uuid="60460a07-1b86-4c72-8cdb-9f3d7ed1faaa"/>
+				<imageExpression><![CDATA["C:\\Users\\OFFICE\\Pictures\\13439002_1084100748326566_1503339397673912243_n.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="173" y="0" width="73" height="34" forecolor="#6666FF" uuid="d85221dd-b4af-43a4-adfe-09b7d34f7bfc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Maiandra GD" size="20"/>
+				</textElement>
+				<text><![CDATA[LAND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="66" width="517" height="20" forecolor="#FF0099" uuid="cde34c2f-32e4-4992-a1ed-bacc9a0ffd73"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[0560 042 694 / 0560 042 695]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="103" width="100" height="20" uuid="fee2ab89-fc94-4f30-829c-7283bf7f58bf"/>
+				<textFieldExpression><![CDATA[$F{NumContrat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<rectangle>
+				<reportElement x="72" y="4" width="418" height="28" uuid="991777f7-e8bc-4c46-8047-cb0dd236f447"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="103" y="4" width="361" height="28" uuid="52204e17-4d15-492b-95b8-e2e70bd608b7"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ORDRE DE MISSION]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="346" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="55" width="436" height="30" uuid="b872d8fa-9722-4a73-815e-71761435d66b"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineStyle="Dashed"/>
+					<leftPen lineStyle="Dashed"/>
+					<bottomPen lineStyle="Dashed"/>
+					<rightPen lineStyle="Dashed"/>
+				</box>
+				<textElement>
+					<font fontName="Bell MT" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Mission est donnée à :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="85" width="533" height="166" uuid="3cd7751b-01d0-4555-b539-b0358c1a7e4a"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Bell MT" size="12" isItalic="true"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<text><![CDATA[Mr/Mme :
+Fonction :
+Lieu de mission : Annaba -                                  - Retour
+Date de départ : 
+Date de retour :
+Objet de la mission : 
+Moyen de transport : 
+                                              
+                                                                                       ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="265" width="195" height="20" uuid="efe39c22-bbf0-49f6-8f12-4a21d94be728"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fait à annaba le :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="265" width="106" height="20" uuid="ea60ceef-b873-4844-8c6f-8a49c794ca4e"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Copies :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="295" width="106" height="20" uuid="ee8f52ba-83bc-4001-aa7b-4e8e60ea388d"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[-chrono]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="85" width="100" height="20" uuid="90c540e9-6b06-4377-a6b1-748fc7818d3d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="85" width="100" height="20" uuid="71962a2a-4aad-4433-80e8-23726f23a4a8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="109" width="100" height="20" uuid="8e08082f-f3a3-483b-bca4-707fa594e3c1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Libelle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="131" width="100" height="20" uuid="0bae2b0d-f3c6-4687-8a63-196a9eb78435"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Lieu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="151" width="100" height="20" uuid="e8181ae4-59e0-49ca-a4ef-0cbbd655511c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DateDeb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="178" width="100" height="20" uuid="a4557e50-91ac-460d-a197-50e6993d054a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datefin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="202" width="100" height="20" uuid="aaf77ec0-c3ba-4b3c-b7d8-3e0e11b53470"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Objet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="226" width="100" height="20" uuid="88331ac7-01ff-4119-9930-5cab107a3054"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Moyen}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="448" y="265" width="100" height="20" uuid="5e667c82-39e5-4a8e-b477-dccdc13b4615"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

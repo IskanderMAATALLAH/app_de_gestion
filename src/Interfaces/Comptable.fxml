@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.Comptable">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="1000.0" style="-fx-background-color: #454960;">
+         <children>
+            <Label layoutY="6.0" prefHeight="50.0" prefWidth="517.0" text="Comptable">
+               <padding>
+                  <Insets left="85.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#5467d7" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icones/comptable.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="926.0" layoutY="15.0" onMouseClicked="#LogOut">
+               <image>
+                  <Image url="@../Icones/icons8-sortie-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <HBox layoutY="70.0" prefHeight="580.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="580.0" prefWidth="263.0">
+               <children>
+                  <Label text="Recherche" textFill="#192c6b" underline="true">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="95.0" top="80.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="283.0" style="-fx-background-color: black;" />
+                  <Label text="Factures:" textFill="#172561" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="110.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="270.0" spacing="5.0">
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="275.0" spacing="5.0">
+                           <children>
+                              <JFXComboBox fx:id="cbFourn" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#eventListerFourn" prefWidth="135.0" promptText="-Nom fournisseur-">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin></JFXComboBox>
+                              <JFXComboBox fx:id="cbProd" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#eventListerProd" prefWidth="135.0" promptText="-Produit-" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="285.0">
+                           <children>
+                              <JFXDatePicker fx:id="dateDu" defaultColor="#293989" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="140.0" promptText="Du(jj/mm/aaaa)">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin></JFXDatePicker>
+                              <JFXDatePicker fx:id="dateAu" defaultColor="#293989" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="140.0" promptText="Au(jj/mm/aaaa)" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <JFXRadioButton fx:id="payéRb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Payé">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="45.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="selectedItem" />
+                                 </toggleGroup>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="nonPayéRb" text="Non Payé" toggleGroup="$selectedItem">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXRadioButton>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="36.0" prefWidth="487.0" spacing="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#rechFacAction" style="-fx-background-color: #40A497;" text="Rechercher" textFill="#fffbfb">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icones/rechercher.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#actualiserRechFact" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="#fffbfb">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icones/actualiser.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+                  <Label text="Revenus:" textFill="#172561" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="110.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="31.0" prefWidth="280.0">
+                     <children>
+                        <JFXDatePicker fx:id="dateDuRev" defaultColor="#293989" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="140.0" promptText="Du(jj/mm/aaaa)">
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                        <JFXDatePicker fx:id="dateAuRev" defaultColor="#293989" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="140.0" promptText="Au(jj/mm/aaaa)" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="36.0" prefWidth="487.0" spacing="20.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#rechRevAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #40A497;" text="Rechercher" textFill="#fffbfb">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icones/rechercher.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#actualiserRechRev" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="#fffbfb">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icones/actualiser.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ouvrirGraphiques" prefHeight="35.0" prefWidth="265.0" style="-fx-background-color: #D95454;" text="Statisitiques" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="10.0" top="35.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../Icones/statistiques.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-10.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="580.0" prefWidth="5.0" style="-fx-background-color: black;" />
+            <VBox prefHeight="200.0" prefWidth="725.0">
+               <children>
+                  <Label text="Factures:" textFill="#2b4586" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="tabFacture" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="251.0" prefWidth="712.0">
+                     <columns>
+                        <TableColumn fx:id="nomF" prefWidth="90.0" text="Fournisseur" />
+                        <TableColumn fx:id="nomP" prefWidth="89.0" text="Produit" />
+                        <TableColumn fx:id="date_fact" prefWidth="70.0" text="Date" />
+                        <TableColumn fx:id="prixUnit" prefWidth="85.0" text="Prix.Unit.(DA)" />
+                        <TableColumn fx:id="qte" prefWidth="35.0" text="Qte" />
+                        <TableColumn fx:id="monTot" prefWidth="88.0" text="Mont.Tot.(DA)" />
+                        <TableColumn fx:id="rem" prefWidth="40.0" text="Rem%" />
+                        <TableColumn fx:id="autreCharge" prefWidth="55.0" text="A.C.(DA)" />
+                        <TableColumn fx:id="montNet" prefWidth="90.0" text="Mont.Net(DA)" />
+                        <TableColumn fx:id="vers" prefWidth="65.0" text="Vers(DA)" />
+                        <TableColumn fx:id="montRest" prefWidth="100.0" text="Mont.Rest.(DA)" />
+                     </columns>
+                  </TableView>
+                  <HBox prefHeight="285.0" prefWidth="725.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Revenus:" textFill="#2b4586" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="7.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TableView fx:id="tabRev" prefHeight="330.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="dateRev" prefWidth="100.0" text="Date" />
+                                  <TableColumn fx:id="recette" prefWidth="100.0" text="Recette (DA)" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="280.0" prefWidth="501.0">
+                           <children>
+                              <Label text="Avance de paiement:" textFill="#2b4586" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="7.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TableView fx:id="tabAvPaie" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="501.0">
+                                <columns>
+                                  <TableColumn fx:id="numContrat" prefWidth="75.0" text="N° Contrat" />
+                                  <TableColumn fx:id="prenom" prefWidth="120.0" text="Prénom" />
+                                    <TableColumn fx:id="nom" prefWidth="130.0" text="Nom" />
+                                    <TableColumn fx:id="date" prefWidth="89.0" text="Date" />
+                                    <TableColumn fx:id="mont" prefWidth="85.0" text="Montant (DA)" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

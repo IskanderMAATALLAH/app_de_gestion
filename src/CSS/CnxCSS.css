@@ -1,0 +1,17 @@
+.backgroundColor
+{
+    -fx-background-color: linear-gradient(#5A5E5E,white);
+}
+.boderPane
+{
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-radius: 2px;
+    -fx-box-shadow: 30px 30px red;
+}
+.hoverBtn:hover{
+            -fx-border-style: solid;
+            -fx-border-width: 2px;
+            -fx-border-color: white;
+            -fx-border-radius: 3px;
+            }

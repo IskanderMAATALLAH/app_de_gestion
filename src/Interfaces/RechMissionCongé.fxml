@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="475.0" prefWidth="247.0" spacing="15.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.RechMissionCongé">
+   <children>
+      <HBox prefHeight="36.0" prefWidth="247.0" spacing="10.0">
+         <VBox.margin>
+            <Insets top="120.0" />
+         </VBox.margin>
+         <children>
+            <JFXRadioButton fx:id="Cong" onAction="#Congé" text="Congé">
+               <HBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </HBox.margin>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="mission" onAction="#Mission" text="Mission">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </JFXRadioButton>
+         </children>
+      </HBox>
+      <JFXComboBox fx:id="Personnel" prefHeight="25.0" prefWidth="321.0" promptText="Contrat">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXComboBox>
+      <JFXDatePicker fx:id="DateDeb" prefHeight="25.0" prefWidth="280.0" promptText="Date debut">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXDatePicker>
+      <JFXDatePicker fx:id="DateFin" promptText="Date retour">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXDatePicker>
+      <HBox prefHeight="34.0" prefWidth="262.0" spacing="20.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <JFXButton fx:id="ButtRech" buttonType="RAISED" disable="true" onAction="#Rechercher" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: green;" text="Rechercher" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="Annule" disable="true" onAction="#Annuler" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: red;" text="Annuler" textFill="WHITE" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

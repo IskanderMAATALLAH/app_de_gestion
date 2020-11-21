@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb6c9eb7-e322-4401-8caa-6c38fcb66573">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="319"/>
+	<queryString>
+		<![CDATA[select * from personnel;]]>
+	</queryString>
+	<field name="NumContrat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Prenom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateNaiss" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Téléphone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateDebCon" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Durée" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Salaire" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPoste" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateFin" class="java.lang.String"/>
+	<variable name="variable1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement x="326" y="0" width="115" height="34" forecolor="#6666FF" uuid="2f8cff9c-2866-487c-92ed-6a1ed349c1d9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Maiandra GD" size="20"/>
+				</textElement>
+				<text><![CDATA[LAND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="63" width="83" height="20" uuid="eb08b8ba-e7ea-46b7-8e9d-46bb528612a4"/>
+				<textElement>
+					<font size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ref:F.L/DG/N° :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="34" width="267" height="20" forecolor="#FF0099" uuid="c7ea8e3a-3a8b-4882-a3c6-4354416df416"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ Siège social : Parc d'attractions Sidi Achour]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="54" width="56" height="20" forecolor="#FF0099" uuid="769f537b-ed69-4256-87d9-ec9a21e7baa2"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ANNABA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="34" width="258" height="20" forecolor="#FF0099" uuid="3755f3dc-c922-451f-a90d-108b88c0c45d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[société par actions au capital de 30.666.000 DA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="0" width="133" height="34" forecolor="#3333FF" uuid="f2b623ed-274a-4ab3-982d-cf99eba03342"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Maiandra GD" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Spa FAROUK]]></text>
+			</staticText>
+			<image>
+				<reportElement x="256" y="0" width="32" height="34" uuid="60460a07-1b86-4c72-8cdb-9f3d7ed1faaa"/>
+				<imageExpression><![CDATA["C:\\Users\\OFFICE\\Pictures\\13439002_1084100748326566_1503339397673912243_n.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="83" y="63" width="100" height="20" uuid="bc5986eb-d182-40f0-9749-eac664498758"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NumContrat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<rectangle>
+				<reportElement x="72" y="4" width="418" height="28" uuid="991777f7-e8bc-4c46-8047-cb0dd236f447"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="103" y="4" width="361" height="28" uuid="52204e17-4d15-492b-95b8-e2e70bd608b7"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[CONTRAT DE TRAVAIL A DUREE DETERMINEE]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="242" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="65" uuid="b872d8fa-9722-4a73-815e-71761435d66b"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineStyle="Dashed"/>
+					<leftPen lineStyle="Dashed"/>
+					<bottomPen lineStyle="Dashed"/>
+					<rightPen lineStyle="Dashed"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Entre la société par actions FAROUK LAND ,Société dont le siège social est sis au parc d'attractions de Sidi Achour ,Annaba,représentée par son Président Directeur Général ,d'une part ,
+
+ET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="154" width="555" height="84" uuid="63064ab0-12e1-46ba-bf8d-ba2a9558e0ff"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[il a été convenu et arreté ce qui suit : 
+
+Conformément aux dispositions de la Loi N° 90/11 , relative aux relations de travail , modifiée par l'Ordonnance N° 96/21 du 09/07/1996 , il est procédé à l'établissement du présent contrat de travail à durée determinée]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="65" width="555" height="89" uuid="3cd7751b-01d0-4555-b539-b0358c1a7e4a"/>
+				<textElement verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mr/Mme/Mlle :                                                                                                                                                        
+            
+Né(e) le :
+
+Demeurant à :                                                                 d'autre part , ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="65" width="83" height="20" uuid="6e98e9d2-7286-4a19-90f9-5c841df1d681"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="65" width="81" height="20" uuid="9f2c8892-1d17-419d-bd27-663db4ddecbe"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="98" width="100" height="20" uuid="fd71dd14-f1e2-4e45-b8e7-7b3b81fd5173"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DateNaiss}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="126" width="186" height="20" uuid="a103b867-78f3-4884-8696-ff8e4c1c6652"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Adresse}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="375" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="195" height="20" uuid="efe39c22-bbf0-49f6-8f12-4a21d94be728"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 01 : Emploi et qualification ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="319" width="555" height="42" uuid="d55cbcf3-2d1a-427c-ad64-0c5a9e807b89"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Pour le travail qu'il/elle accompli(e),M/Mme/Mlle                                                             percevra une rémunération nette de                     par mois.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="555" height="124" uuid="bc1a6ba9-ef2f-44c8-8cce-23d7959b3a99"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mr/Mme                                                                  est recruté(e) en qualité D'opérateur/trice manège , au sein de la société . A ce titre il/elle est chargé(e) d'assurer l'expoloitation et mise en marche du manège mis à sa disposition , pour adultes ou pour enfants , dans le strict respect des consignes de sécurité des usagers , veille à préserver l'image de marque du parc FAROUK LAND auprés du public . Arrete sa feuille de rotation en fin de travail et la remet au chef de parc signale toutes anomalies...il(elle) peut etre appelé à d'autres taches dans le cadre des dispositifs mis en place par la société .Il (elle) est souis aux dispositions du réglement intérieur de la société .
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="181" width="195" height="20" uuid="777e83a7-954e-49d0-8f98-e3a0817d1f88"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 02 : Durée contrat :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="280" width="195" height="20" uuid="e03e9f6e-da2e-45bb-8d64-1adfded002f1"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 03 : Rémunération ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="219" width="555" height="37" uuid="46d95382-997d-43f5-bb16-5d8208717d77"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[La présent contrat est conclu pour une durée déterminée de          (Mois) à compter du                                  et arriveraà terme de droit le                               pour traveaux saisonniers
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="45" width="85" height="20" uuid="93bdca40-5865-4de8-b830-46d4cd3d628d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="45" width="95" height="20" uuid="10102fb9-6af3-4d81-a3ef-5eb1bdcd021c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="219" width="20" height="20" uuid="7d13511e-e12e-4639-9225-3b31ab23f54d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Durée}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="219" width="77" height="20" uuid="37132c6e-b781-437e-b38f-4345bbfd088f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DateDebCon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="319" width="77" height="20" uuid="dadbd805-82b6-4524-a6f1-f1d3dfd067b3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="319" width="85" height="20" uuid="fcb7767b-8a77-484b-8365-a30429557f94"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="334" width="57" height="20" uuid="f07e3cb3-aea9-4e01-b4be-861514cdfe0d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Salaire}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="235" width="100" height="17" uuid="91b649ac-083d-44e5-917c-ab05cae05c34"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DateFin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

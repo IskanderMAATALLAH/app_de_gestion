@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ListePersonnel">
+   <children>
+      <HBox prefHeight="520.0" prefWidth="780.0" style="-fx-background-color: EAEDF1;">
+         <children>
+            <VBox prefHeight="520.0" prefWidth="298.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" maxHeight="-Infinity" minHeight="-Infinity" onAction="#nouvelEmployé" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #46ae63;" text="Nouvel employé" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="43.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icones/ajoutEmployé.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXComboBox fx:id="choixEmp" editable="true" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#cherchEmp" prefWidth="280.0" promptText="-Chosissez un employé-">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin></JFXComboBox>
+                        <JFXComboBox fx:id="choixPoste" editable="true" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#cherchPoste" prefWidth="280.0" promptText="-Poste-">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin></JFXComboBox>
+                        <JFXDatePicker fx:id="dateAu1" defaultColor="#293989" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#eventDateDu" prefWidth="285.0" promptText="-Date de fin du contrat min:(jj/mm/aaaa)-">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin></JFXDatePicker>
+                        <JFXDatePicker fx:id="dateAu2" defaultColor="#293989" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#eventDateAu" prefWidth="285.0" promptText="-Date de fin du contrat max:(jj/mm/aaaa)-">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin></JFXDatePicker>
+                        <HBox prefHeight="34.0" prefWidth="299.0" spacing="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#rechAction" style="-fx-background-color: #40A497;" text="Rechercher" textFill="#fffbfb">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icones/rechercher.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#actualiserAction" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="#fffbfb">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icones/actualiser.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" style="-fx-background-color: #454960;" />
+                     </children>
+                  </VBox>
+                  <ScrollPane fx:id="listePersonnel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="299.0">
+                     <content>
+                        <VBox fx:id="vBox" onMouseClicked="#clickeed" prefHeight="280.0" prefWidth="290.0" spacing="10.0">
+                           <padding>
+                              <Insets left="5.0" top="5.0" />
+                           </padding></VBox>
+                     </content></ScrollPane>
+               </children>
+            </VBox>
+            <Pane fx:id="panee" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="450.0" style="-fx-border-width: 3;">
+               <children>
+                  <VBox fx:id="vBoxInfo" prefHeight="480.0" prefWidth="450.0" spacing="7.0" style="-fx-border-color: #2F3C60; -fx-border-width: 2; -fx-border-radius: 2; -fx-background-color: #C3D0DE;">
+                     <children>
+                        <HBox prefHeight="130.0" prefWidth="420.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icones/photoEmployé.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="Nom et prénom" textFill="#0a14ab">
+                                 <HBox.margin>
+                                    <Insets top="60.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="24.0" prefWidth="420.0">
+                           <children>
+                              <Label text="N° Contrat:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="24.0" prefWidth="420.0">
+                           <children>
+                              <Label text="Date de naissance:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="24.0" prefWidth="420.0">
+                           <children>
+                              <Label text="Adresse:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="25.0" prefWidth="420.0">
+                           <children>
+                              <Label text="N° Tél:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="25.0" prefWidth="420.0">
+                           <children>
+                              <Label text="Poste:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="21.0" prefWidth="420.0">
+                           <children>
+                              <Label text="Date de début du contrat:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="15.0" prefWidth="420.0">
+                           <children>
+                              <Label text="Durée:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="420.0">
+                           <children>
+                              <Label text="Date de fin de contrat:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="420.0">
+                           <children>
+                              <Label text="Salaire(D.A.):">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" disable="true" prefHeight="30.0" prefWidth="84.0" style="-fx-background-color: #3965b8;" text="Modifier" textFill="#f2f2f2fc">
+                                 <HBox.margin>
+                                    <Insets left="120.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" disable="true" style="-fx-background-color: ea4444;" text="Supprimer" textFill="#f2f2f2fc">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="15.0" top="35.0" />
+               </HBox.margin>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</Pane>

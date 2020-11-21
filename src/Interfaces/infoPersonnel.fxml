@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#show" prefHeight="85.0" prefWidth="275.0" style="-fx-background-color: #C3D0DE; -fx-border-color: #2F3C60; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.InfoPersonnel">
+   <children>
+      <VBox prefHeight="90.0" prefWidth="295.0">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="295.0">
+               <children>
+                  <Label text="N°Contrat:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="3.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="numContrat" prefHeight="17.0" prefWidth="205.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="295.0">
+               <children>
+                  <Label text="Prénom:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="prénom" prefHeight="17.0" prefWidth="205.0">
+                     <HBox.margin>
+                        <Insets left="24.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="295.0">
+               <children>
+                  <Label text="Nom:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nom" prefHeight="17.0" prefWidth="205.0">
+                     <HBox.margin>
+                        <Insets left="43.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets left="5.0" />
+   </padding>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</Pane>

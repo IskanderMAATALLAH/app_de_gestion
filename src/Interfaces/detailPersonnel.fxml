@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="780.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.DetailPersonnel">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="650.0" style="-fx-background-color: CBCDD0; -fx-border-style: solid; -fx-border-width: 2;">
+         <VBox.margin>
+            <Insets left="60.0" top="40.0" />
+         </VBox.margin>
+         <children>
+            <Label text="Personnel" textFill="#3d54c9" underline="true">
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="28.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Nombre d'employé:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbEMpLabel">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Maintenance:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbMaint" prefHeight="21.0" prefWidth="106.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Caissiers:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbCaissier">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="42.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Opérateurs:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbOpérateurs">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Sécurité:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbSécurité">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Contrat:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Date de prochaine fin de contrat:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="prochFinCont">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="650.0" style="-fx-background-color: CBCDD0; -fx-border-style: solid; -fx-border-width: 2;">
+         <VBox.margin>
+            <Insets left="60.0" />
+         </VBox.margin>
+         <children>
+            <Label text="Maintenance:" textFill="#3d54c9" underline="true">
+               <font>
+                  <Font name="Calibri Bold" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="30.0" prefWidth="646.0">
+               <children>
+                  <Label text="Date de prochaine maintenance:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="prochMaint">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="38.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="646.0">
+               <children>
+                  <Label text="Nombre de manèges en suspension:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbManSusp">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets left="10.0" />
+   </padding>
+</VBox>

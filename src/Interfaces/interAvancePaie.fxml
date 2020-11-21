@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.InterAvancePaie">
+   <children>
+      <VBox prefHeight="450.0" prefWidth="550.0">
+         <children>
+            <Pane prefHeight="30.0" prefWidth="550.0" style="-fx-background-color: #AAAFAE;">
+               <children>
+                  <Label text="Avance de paie" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="521.0" layoutY="1.0" onMouseClicked="#fermer" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icones/fermer.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXComboBox fx:id="cbEmp" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#cherchEmp" prefWidth="300.0" promptText="-Employé-" visibleRowCount="5">
+               <VBox.margin>
+                  <Insets left="120.0" top="20.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <JFXTextField fx:id="montant" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#Mont" prefWidth="300.0" promptText="-Montant (D.A.)-">
+               <VBox.margin>
+                  <Insets left="120.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnValider" prefHeight="30.0" style="-fx-background-color: #46ae63;" text="Valider" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icones/valider.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="110.0" top="30.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#btnModifier" style="-fx-background-color: #3965b8;" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icones/valider.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#btnSupprimer" style="-fx-background-color: ea4444;" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icones/annuler.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tabAvPaie" onMouseClicked="#clickTab" prefHeight="230.0" prefWidth="550.0">
+              <columns>
+                <TableColumn fx:id="numContrat" prefWidth="90.0" text="N° Contrat" />
+                <TableColumn fx:id="prenom" prefWidth="135.0" text="Prénom" />
+                  <TableColumn fx:id="nom" prefWidth="135.0" text="Nom" />
+                  <TableColumn fx:id="date" prefWidth="88.0" text="Date" />
+                  <TableColumn fx:id="mont" prefWidth="100.0" text="Montant (D.A.)" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

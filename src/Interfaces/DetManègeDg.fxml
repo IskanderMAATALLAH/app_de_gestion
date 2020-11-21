@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.DetManègeDg">
+   <children>
+      <VBox minWidth="-Infinity" prefHeight="350.0" prefWidth="420.0" style="-fx-border-width: 2; -fx-border-radius: 2; -fx-border-color: #2F3C60; -fx-background-color: #C3D0DE;">
+         <children>
+            <HBox prefHeight="127.0" prefWidth="420.0">
+               <children>
+                  <Label fx:id="NomManége" text="Nom Manége" textFill="#0a14ab">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="50.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="420.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Etat :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="etat" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="112.13671875">
+                     <HBox.margin>
+                        <Insets left="210.0" top="7.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="420.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dernière maintenace :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="derniere" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="102.13671875">
+                     <HBox.margin>
+                        <Insets left="95.0" top="7.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="420.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Périodicité de maintenance (Jours):">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="periode" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="137.13671875">
+                     <HBox.margin>
+                        <Insets left="10.0" top="7.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="420.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prochaine maintenance : ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="prochaine" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.13671875">
+                     <HBox.margin>
+                        <Insets left="75.0" top="7.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="420.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zone :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="zone" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="58.13671875">
+                     <HBox.margin>
+                        <Insets left="200.0" top="7.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

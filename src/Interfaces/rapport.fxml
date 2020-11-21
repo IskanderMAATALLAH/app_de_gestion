@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="550.0" style="-fx-background-color: EAEDF1;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.Rapport">
+   <children>
+      <Pane layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="550.0" style="-fx-background-color: grey;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rapport de manège :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <VBox layoutY="27.0" prefHeight="367.0" prefWidth="266.0" spacing="10.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Agent Intervenant :">
+               <VBox.margin>
+                  <Insets left="80.0" top="40.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nature de l'intervention effectué :">
+               <VBox.margin>
+                  <Insets left="80.0" top="30.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PDR Consommation :">
+               <VBox.margin>
+                  <Insets left="80.0" top="30.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Carb.Lubrif :">
+               <VBox.margin>
+                  <Insets left="80.0" top="30.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Horaires :">
+               <VBox.margin>
+                  <Insets left="80.0" top="30.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Resultat">
+               <VBox.margin>
+                  <Insets left="80.0" top="30.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="265.0" layoutY="27.0" prefHeight="367.0" prefWidth="285.0">
+         <children>
+            <JFXComboBox fx:id="Agent" prefHeight="25.0" prefWidth="286.0" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <JFXTextField fx:id="Nature" onKeyTyped="#NatureConrainte" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="PDR" onKeyTyped="#PDRContrainte" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="Carb" onKeyTyped="#CarbContrainte" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="Horaires" onKeyTyped="#HoraireContrainte" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="Resultat" onKeyTyped="#ResultatContrainte" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+      </VBox>
+      <HBox layoutY="420.0" prefHeight="44.0" prefWidth="550.0" spacing="30.0">
+         <children>
+            <JFXButton onAction="#ajouter" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="190.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#annuler" style="-fx-background-color: red;" text="Annuler" textFill="WHITE">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</Pane>

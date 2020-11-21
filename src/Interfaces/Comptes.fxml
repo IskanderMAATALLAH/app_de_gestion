@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="780.0" style="-fx-background-color: EAEDF1;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.Comptes">
+   <children>
+      <Separator layoutX="250.0" orientation="VERTICAL" prefHeight="520.0" prefWidth="0.0" />
+      <VBox prefHeight="520.0" prefWidth="253.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="Util" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="230.0" promptText="Nom d'uitlisateur" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" top="50.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="MotDpasse" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="230.0" promptText="Mot de passe" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="Confirme" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="230.0" promptText="-Confirmation du mot de passe-" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXComboBox fx:id="Employe" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="230.0" promptText="Employé" style="-fx-background-color: EAEDF1;">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <HBox prefHeight="25.0" prefWidth="242.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton fx:id="add" buttonType="RAISED" onAction="#ajouter" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #46ae63;" text="Ajouter" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton fx:id="modif" buttonType="RAISED" onAction="#modifier" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #3965b8;" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton fx:id="del" buttonType="RAISED" onAction="#supprimer" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: ea4444;" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+               </children>
+            </HBox>
+            <Separator maxHeight="-Infinity" minHeight="-Infinity" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: Black;" />
+            <Label text="Recherche" textFill="#293989" underline="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="90.0" />
+               </VBox.margin>
+            </Label>
+            <JFXTextField fx:id="RechUtil" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#Cherche" prefWidth="235.0" promptText="Nom d'utilisateur">
+               <VBox.margin>
+                  <Insets left="10.0" right="40.0" top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" onAction="#Rechercher" style="-fx-background-color: #40A497;" text="Rechercher" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="80.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icones/rechercher.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Label layoutX="253.0" layoutY="14.0" text="Comptes :" textFill="#324d6e" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="253.0" layoutY="52.0" prefHeight="468.0" prefWidth="525.0">
+         <content>
+            <TableView fx:id="Compte" onMouseClicked="#show" prefHeight="453.0" prefWidth="525.0">
+               <columns>
+                  <TableColumn fx:id="Contrat" minWidth="-Infinity" prefWidth="-1.0" text="Employé" />
+                  <TableColumn fx:id="poste" minWidth="-Infinity" prefWidth="100.0" text="Poste" />
+                  <TableColumn fx:id="Nom" prefWidth="200.0" text="Nom d'utilisateur" />
+                  <TableColumn fx:id="MDP" prefWidth="-1.0" text="Mot de passe" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

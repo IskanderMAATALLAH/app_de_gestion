@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.EnteteFinance">
+   <children>
+      <Pane fx:id="panee" layoutX="221.0" prefHeight="580.0" prefWidth="780.0" />
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="220.0" style="-fx-background-color: #454960;">
+         <children>
+            <ScrollPane layoutY="64.0" prefHeight="453.0" prefWidth="220.0" style="-fx-background-color: #455471;">
+               <content>
+                  <VBox fx:id="vBox" prefHeight="451.0" prefWidth="218.0" style="-fx-background-color: #454960;">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <JFXButton layoutY="517.0" onAction="#ouvrirAccueil" prefHeight="50.0" prefWidth="220.0" text="SORTIR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="580.0" prefWidth="780.0">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="400.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <Label text="Recherche" textFill="#233a8d" underline="true">
+                     <VBox.margin>
+                        <Insets left="165.0" top="160.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <JFXDatePicker prefHeight="25.0" prefWidth="160.0" promptText="-Du-">
+                           <HBox.margin>
+                              <Insets left="40.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                        <JFXDatePicker prefHeight="25.0" prefWidth="160.0" promptText="-Jusqu'au">
+                           <HBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0" spacing="25.0">
+                     <children>
+                        <JFXTextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="160.0" promptText="-Recette min(D.A.)-">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXTextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="160.0" promptText="-Recette max(D.A.)-" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="297.0" spacing="30.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" style="-fx-background-color: #3965b8;" text="Rechercher" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="65.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="580.0" prefWidth="5.0" style="-fx-background-color: black;" />
+            <JFXTreeTableView prefHeight="580.0" prefWidth="380.0">
+               <columns>
+                  <TreeTableColumn prefWidth="180.0" text="Date" />
+                  <TreeTableColumn prefWidth="200.0" text="Recette (D.A)" />
+               </columns>
+            </JFXTreeTableView>
+         </children>
+      </HBox>
+   </children>
+</Pane>

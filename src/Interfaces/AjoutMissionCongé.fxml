@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="PaneChange" prefHeight="475.0" prefWidth="247.0" spacing="15.0" style="-fx-background-color: EAEDF1;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.AjoutMissionCongé">
+   <children>
+      <HBox prefHeight="36.0" prefWidth="247.0" spacing="10.0">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <children>
+            <JFXRadioButton fx:id="Cong" onAction="#Congé" style="-fx-background-color: EAEDF1;" text="Congé">
+               <HBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </HBox.margin>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="mission" onAction="#Mission" style="-fx-background-color: EAEDF1;" text="Mission">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </JFXRadioButton>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="Num" onKeyTyped="#NumContrainte" promptText="Numéro congé" style="-fx-background-color: EAEDF1;">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXComboBox fx:id="Personnel" prefHeight="25.0" prefWidth="321.0" promptText="Contrat" style="-fx-background-color: EAEDF1;">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXComboBox>
+      <JFXTextField fx:id="Adresse" promptText="adresse" style="-fx-background-color: EAEDF1;">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXDatePicker fx:id="DateDeb" prefHeight="25.0" prefWidth="280.0" promptText="Date debut" style="-fx-background-color: EAEDF1;">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXDatePicker>
+      <JFXDatePicker fx:id="DateFin" promptText="Date retour" style="-fx-background-color: EAEDF1;">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXDatePicker>
+      <JFXTextField fx:id="Titre" promptText="Titre de l'exercice" style="-fx-background-color: EAEDF1;">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField fx:id="Objet" promptText="Objet" style="-fx-background-color: EAEDF1;">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField fx:id="Moyen" promptText="Moyen" style="-fx-background-color: EAEDF1;">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <HBox prefHeight="34.0" prefWidth="262.0" spacing="20.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <JFXButton fx:id="ButtValide" buttonType="RAISED" disable="true" onAction="#Valide" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: green;" text="Valider" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="ButtSupp" disable="true" onAction="#SuppCongé" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.NumberValidator?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.AjoutModifPersonnel">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="625.0" style="-fx-background-color: EAEDF1;" AnchorPane.topAnchor="30.0">
+         <children>
+            <VBox prefHeight="550.0" prefWidth="450.0" spacing="5.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                  <NumberValidator />
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="N° Contrat:">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="numContrat" editable="false" onKeyTyped="#NuMcOntraint" prefWidth="173.0" style="-fx-background-color: #ADCCEF;">
+                           <HBox.margin>
+                              <Insets left="126.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Prénom:">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="prénom" onKeyTyped="#PrenomContraint" prefWidth="173.0" style="-fx-background-color: EAEDF1;">
+                           <HBox.margin>
+                              <Insets left="143.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Nom:">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="nom" onKeyTyped="#NomContrainte" prefWidth="173.0" style="-fx-background-color: EAEDF1;">
+                           <HBox.margin>
+                              <Insets left="162.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Date de naissance:">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="dateNaiss" defaultColor="#336aa8" prefHeight="25.0" prefWidth="185.0">
+                           <HBox.margin>
+                              <Insets left="80.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Adresse:">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="adresse" onKeyTyped="#AdresseCont" prefWidth="173.0" style="-fx-background-color: EAEDF1;">
+                           <HBox.margin>
+                              <Insets left="144.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="N° Telephone:">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="numTel" onKeyTyped="#NtElContrainte" prefWidth="173.0" style="-fx-background-color: EAEDF1;">
+                           <HBox.margin>
+                              <Insets left="108.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Date de début du contrat:">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="dateDebCont" defaultColor="#336aa8" prefHeight="25.0" prefWidth="185.0">
+                           <HBox.margin>
+                              <Insets left="35.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Durée (Mois):">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="duréeCont" prefWidth="173.0" style="-fx-background-color: EAEDF1;">
+                           <HBox.margin>
+                              <Insets left="113.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Salaire (D.A.):">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="salaire" onKeyTyped="#SalaireContrainte" prefHeight="25.0" prefWidth="176.0" style="-fx-background-color: EAEDF1;">
+                           <HBox.margin>
+                              <Insets left="115.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Poste:">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="poste" editable="true" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: EAEDF1;">
+                           <HBox.margin>
+                              <Insets left="157.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="200.0" spacing="80.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ajouterEmployé" prefWidth="120.0" style="-fx-background-color: #46ae63;" text="Valider" textFill="#fbfffc">
+                           <HBox.margin>
+                              <Insets left="255.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icones/valider.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView fx:id="ImagePers" fitHeight="180.0" fitWidth="180.0" onMouseClicked="#openImg" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icones/photoEmployé.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="-10.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </HBox>
+      <Pane prefHeight="30.0" prefWidth="625.0" style="-fx-background-color: #AAAFAE;">
+         <children>
+            <Label layoutX="7.0" layoutY="2.0" text="Contrat" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="596.0" layoutY="-1.0" onMouseClicked="#fermer" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icones/fermer.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

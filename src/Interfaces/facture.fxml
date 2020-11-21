@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.Facture">
+   <children>
+      <Pane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: #AAAFAE;">
+         <children>
+            <Label layoutX="14.0" layoutY="1.0" text="Facture" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="574.0" layoutY="1.0" onMouseClicked="#fermer" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icones/fermer.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox layoutY="30.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: EAEDF1;">
+         <children>
+            <Label text="Fournisseur:" textFill="#2a3583" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="20.0" prefWidth="200.0" spacing="190.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <JFXRadioButton fx:id="rbNvF" onAction="#enableNvF" text="Nouveau">
+                     <HBox.margin>
+                        <Insets left="120.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rbAnF" onAction="#enableAnF" text="Enregistré déja">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <VBox fx:id="vBoxF" disable="true" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXTextField fx:id="idF" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="-Identifiant-" style="-fx-background-color: #ADCCEF;">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="nomF" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#LettreContrainte" prefWidth="200.0" promptText="-Nom-" style="-fx-background-color: EAEDF1;" />
+                        <JFXTextField fx:id="adrF" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="-Adresse-" style="-fx-background-color: EAEDF1;">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="telF" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#TelContrainte" prefWidth="200.0" promptText="-N°Tel-" style="-fx-background-color: EAEDF1;">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" prefWidth="5.0" style="-fx-background-color: black;" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <JFXComboBox fx:id="nomAnF" disable="true" editable="true" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#cherchFournisseur" prefWidth="200.0" promptText="-Fournisseur-" style="-fx-background-color: EAEDF1;">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="600.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <Label text="Produit:" textFill="#2a3583" underline="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <JFXRadioButton fx:id="rbOutil" onAction="#actProduit" text="Outillage">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rbPièce" onAction="#actProduit" text="Pièce">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rbAutre" onAction="#actProduit" text="Autre">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="hBoxNvAnP" prefHeight="20.0" prefWidth="200.0" spacing="190.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <JFXRadioButton fx:id="rbNvP" onAction="#enableNvP" text="Nouveau">
+                     <HBox.margin>
+                        <Insets left="120.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rbAnP" onAction="#enableAnP" text="Enregistré déja">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="200.0" spacing="50.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <VBox fx:id="vBoxP" disable="true" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXTextField fx:id="idP" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="-Reference-" style="-fx-background-color: #ADCCEF;">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="nomP" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="-Produit-" style="-fx-background-color: EAEDF1;" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="75.0" prefWidth="5.0" style="-fx-background-color: black;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Separator>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <JFXComboBox fx:id="nomAnP" disable="true" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#cherchProduit" prefHeight="25.0" prefWidth="200.0" promptText="-Produit-" style="-fx-background-color: EAEDF1;">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label text="Détail facture:" textFill="#2a3583" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="40.0" prefWidth="650.0" spacing="20.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <JFXTextField fx:id="prixUnit" labelFloat="true" onKeyReleased="#montTotal" onKeyTyped="#ChiffresContrainte" prefHeight="25.0" prefWidth="155.0" promptText="-Prix unitaire (D.A.)-" style="-fx-background-color: EAEDF1;">
+                     <HBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="qte" labelFloat="true" onKeyReleased="#montTotal" onKeyTyped="#QteContrainte" prefHeight="25.0" prefWidth="61.0" promptText="-Quantité-" style="-fx-background-color: EAEDF1;">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></JFXTextField>
+                  <JFXTextField fx:id="montTotal" labelFloat="true" prefHeight="25.0" prefWidth="165.0" promptText="-Montant total (D.A.)-" style="-fx-background-color: EAEDF1;">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></JFXTextField>
+                  <JFXTextField fx:id="remise" labelFloat="true" onKeyReleased="#calculRemise" onKeyTyped="#ChiffresContrainte" prefHeight="25.0" prefWidth="70.0" promptText="-Remise (%)-" style="-fx-background-color: EAEDF1;">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></JFXTextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="650.0" spacing="5.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <JFXTextField fx:id="autreCharge" labelFloat="true" onKeyReleased="#calculAutre" onKeyTyped="#ChiffresContrainte" prefHeight="25.0" prefWidth="80.0" promptText="-Autre (D.A.)-" style="-fx-background-color: EAEDF1;">
+                     <HBox.margin>
+                        <Insets left="70.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="montNet" labelFloat="true" prefHeight="25.0" prefWidth="145.0" promptText="-Montant net à payer(D.A.)-" style="-fx-background-color: #F95F5F;">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="vers" labelFloat="true" onKeyReleased="#calculMontRest" onKeyTyped="#ChiffresContrainte" promptText="-Versement D.A.)-" style="-fx-background-color: #58E666;">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin></JFXTextField>
+                  <JFXTextField fx:id="montRest" labelFloat="true" prefHeight="25.0" prefWidth="131.0" promptText="-Montant restant (D.A.)-" style="-fx-background-color: #F6E549;">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin></JFXTextField>
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnValider" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #46ae63;" text="Valider" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icones/valider.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="270.0" top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

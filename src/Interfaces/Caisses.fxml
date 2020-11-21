@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="780.0" style="-fx-background-color: EAEDF1;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.Caisses">
+   <children>
+      <ScrollPane fx:id="listecaisses" layoutX="-2.0" layoutY="111.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="295.0">
+         <content>
+            <VBox fx:id="vBox" onMouseClicked="#clickeed" prefHeight="467.0" prefWidth="291.0" spacing="10.0">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <VBox layoutY="27.0" prefHeight="83.0" prefWidth="296.0">
+         <children>
+            <Text fill="#293989" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Caisses" textAlignment="CENTER" underline="true">
+               <VBox.margin>
+                  <Insets left="110.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="50.0" prefWidth="296.0">
+               <children>
+                  <JFXRadioButton fx:id="tous" onAction="#showall" text="TOUTES">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="ouvert" onAction="#showouv" text="OUVERTES">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="ferme" onAction="#showfer" text="FERMEES">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="333.0" layoutY="179.0" prefHeight="190.0" prefWidth="409.0" spacing="15.0" style="-fx-border-color: black; -fx-border-radius: 2; -fx-border-width: 2; -fx-border-color: #2F3C60; -fx-background-color: #C3D0DE;">
+         <children>
+            <JFXTextField fx:id="id" promptText="Identifiant" style="-fx-background-color: #C3D0DE;">
+               <VBox.margin>
+                  <Insets left="75.0" right="75.0" top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="libelle" promptText="Libelle" style="-fx-background-color: #C3D0DE;">
+               <VBox.margin>
+                  <Insets left="75.0" right="75.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="type" editable="true" prefHeight="25.0" prefWidth="321.0" promptText="Type caisse" style="-fx-background-color: #C3D0DE;">
+               <VBox.margin>
+                  <Insets left="75.0" right="75.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <HBox prefHeight="39.0" prefWidth="409.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="ajout" buttonType="RAISED" onAction="#Ajouter" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #46ae63;" text="Ajouter" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="50.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icones/valider.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="supp" buttonType="RAISED" disable="true" onAction="#supprimer" style="-fx-background-color: ea4444;" text="Supprimer" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icones/annuler.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="annu" buttonType="RAISED" onAction="#annuler" prefHeight="28.0" prefWidth="77.0" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

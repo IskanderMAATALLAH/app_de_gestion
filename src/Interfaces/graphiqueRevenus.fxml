@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.GraphiqueRevenus">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0">
+         <children>
+            <Pane prefHeight="30.0" prefWidth="650.0" style="-fx-background-color: #AAAFAE;">
+               <children>
+                  <Label text="Statistiques" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="620.0" layoutY="-1.0" onMouseClicked="#fermer" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icones/fermer.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="650.0">
+               <content>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1785.0" prefWidth="780.0">
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="635.0">
+                           <children>
+                              <JFXComboBox fx:id="dateDu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="-Du-">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                              <JFXComboBox fx:id="dateAu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="-Au-">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                              <JFXButton fx:id="btnEtablir" buttonType="RAISED" onAction="#etablirGraph" style="-fx-background-color: #40A497;" text="Etablir" textFill="#fffefe">
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnReset" buttonType="RAISED" onAction="#initLineChart" style="-fx-background-color: #EA7373;" text="Reset" textFill="#fffefe">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <LineChart fx:id="lineChart" legendVisible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="635.0" title="Revenus/jour">
+                          <xAxis>
+                            <CategoryAxis label="Journée" side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" label="Revenu(D.A.)" side="LEFT" />
+                          </yAxis>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </LineChart>
+                        <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="780.0" style="-fx-background-color: black;" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXComboBox fx:id="duMois" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" promptText="-Du-">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor></JFXComboBox>
+                              <JFXComboBox fx:id="auMois" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" promptText="-Au-">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor></JFXComboBox>
+                              <JFXButton fx:id="btnEtablir_1" buttonType="RAISED" onAction="#etablirGraph_1" style="-fx-background-color: #40A497;" text="Etablir" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnReset_1" buttonType="RAISED" onAction="#initLineChart_1" style="-fx-background-color: #EA7373;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></HBox>
+                        <LineChart fx:id="lineChart_1" legendVisible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="635.0" title="Revenus/mois">
+                           <xAxis>
+                              <CategoryAxis label="Mois" maxHeight="-Infinity" minWidth="-Infinity" side="BOTTOM" fx:id="x1" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="y1" label="Revenu(D.A.)" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="780.0" style="-fx-background-color: black;" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXComboBox fx:id="dateDu_Client" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" promptText="-Du-">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </JFXComboBox>
+                              <JFXComboBox fx:id="dateAu_Client" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" promptText="-Au-">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </JFXComboBox>
+                              <JFXButton fx:id="btnEtablir_11" buttonType="RAISED" onAction="#etablirGraph_Client" style="-fx-background-color: #40A497;" text="Etablir" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnReset_11" buttonType="RAISED" onAction="#initLineChart_Client" style="-fx-background-color: #EA7373;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <LineChart fx:id="lineChart_Client" legendVisible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="635.0" title="Nombre de clients/Jour">
+                           <xAxis>
+                              <CategoryAxis label="Journée" maxHeight="-Infinity" minWidth="-Infinity" side="BOTTOM" fx:id="x11" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="y11" label="Nbr Clients" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="5.0" prefWidth="780.0" style="-fx-background-color: black;">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Separator>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXComboBox fx:id="duMois_client" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" promptText="-Du-">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </JFXComboBox>
+                              <JFXComboBox fx:id="auMois_Client" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" promptText="-Au-">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </JFXComboBox>
+                              <JFXButton fx:id="btnEtablir_111" buttonType="RAISED" onAction="#etablirGraphMois_Client" style="-fx-background-color: #40A497;" text="Etablir" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnReset_111" buttonType="RAISED" onAction="#initLineChartMois_Client" style="-fx-background-color: #EA7373;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <LineChart fx:id="lineChartMois_Client" legendVisible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="635.0" title="Nombre de clients/Mois">
+                           <xAxis>
+                              <CategoryAxis label="Mois" maxHeight="-Infinity" minWidth="-Infinity" side="BOTTOM" fx:id="x111" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="y111" label="Nbr de clients" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </children>
+                  </VBox>
+               </content>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

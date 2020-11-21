@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="780.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="Controle.InterRevenus">
+   <children>
+      <VBox prefHeight="580.0" prefWidth="780.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <JFXTextField maxHeight="-Infinity" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" promptText="-N° Crédit-">
+                     <HBox.margin>
+                        <Insets left="240.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField maxHeight="-Infinity" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" promptText="-Montant restant- ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <JFXTextField maxHeight="-Infinity" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" promptText="-Fornisseur-">
+                     <HBox.margin>
+                        <Insets left="240.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField maxHeight="-Infinity" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" promptText="N° Sortie" />
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <JFXButton buttonType="RAISED" style="-fx-background-color: #3965b8;" text="Recherche" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="290.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXTreeTableView>
+               <columns>
+                  <TreeTableColumn text="N° Crédit" />
+                  <TreeTableColumn prefWidth="130.0" text="Montant total (D.A.)" />
+                  <TreeTableColumn prefWidth="130.0" text="Montant versé (D.A.)" />
+                  <TreeTableColumn prefWidth="150.0" text="Montant restant (D.A.)" />
+                  <TreeTableColumn prefWidth="210.0" text="Fournisseur" />
+                  <TreeTableColumn text="N° Sortie" />
+               </columns>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXTreeTableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

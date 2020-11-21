@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb6c9eb7-e322-4401-8caa-6c38fcb66573">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="109"/>
+	<queryString>
+		<![CDATA[select * from congé,personnel,poste where IdPerso=NumContrat and personnel.IdPoste = poste.IdPoste;]]>
+	</queryString>
+	<field name="NumCongé" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateDeb" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPerso" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Titre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateRet" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NumContrat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Prenom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateNaiss" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Téléphone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateDebCon" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Durée" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Salaire" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPoste" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Libelle" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="164" splitType="Stretch">
+			<staticText>
+				<reportElement x="295" y="0" width="260" height="34" forecolor="#6666FF" uuid="2f8cff9c-2866-487c-92ed-6a1ed349c1d9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Maiandra GD" size="14"/>
+				</textElement>
+				<text><![CDATA[ Parc d'attractions Sidi Achour ANNABA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="103" width="83" height="20" uuid="eb08b8ba-e7ea-46b7-8e9d-46bb528612a4"/>
+				<textElement>
+					<font size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ref:F.L/DG/N° :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="46" width="517" height="20" forecolor="#FF0099" uuid="3755f3dc-c922-451f-a90d-108b88c0c45d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ Capital social :30.666.000.00 Da-N° RC N° 23/00-0363195B01 - Phones :0560 042 692 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="0" width="133" height="34" forecolor="#3333FF" uuid="f2b623ed-274a-4ab3-982d-cf99eba03342"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Maiandra GD" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Spa FAROUK]]></text>
+			</staticText>
+			<image>
+				<reportElement x="256" y="0" width="32" height="34" uuid="60460a07-1b86-4c72-8cdb-9f3d7ed1faaa"/>
+				<imageExpression><![CDATA["C:\\Users\\OFFICE\\Pictures\\13439002_1084100748326566_1503339397673912243_n.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="173" y="0" width="73" height="34" forecolor="#6666FF" uuid="d85221dd-b4af-43a4-adfe-09b7d34f7bfc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Maiandra GD" size="20"/>
+				</textElement>
+				<text><![CDATA[LAND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="66" width="517" height="20" forecolor="#FF0099" uuid="cde34c2f-32e4-4992-a1ed-bacc9a0ffd73"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[0560 042 694 / 0560 042 695]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="103" width="83" height="20" uuid="483e8b7d-5704-4d8b-959e-a34b7153bae8"/>
+				<textElement>
+					<font size="12" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Annaba le :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="133" width="116" height="20" uuid="b19e6d28-ba9d-45c9-bccd-95ac7417471d"/>
+				<textElement>
+					<font size="12" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Détente (annuel) (*)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="103" width="100" height="20" uuid="95a28a13-1e1a-461f-92f8-b87ec204f22a"/>
+				<textFieldExpression><![CDATA[$F{NumContrat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<rectangle>
+				<reportElement x="72" y="4" width="418" height="28" uuid="991777f7-e8bc-4c46-8047-cb0dd236f447"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="103" y="4" width="361" height="28" uuid="52204e17-4d15-492b-95b8-e2e70bd608b7"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Titre de Congé]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="346" splitType="Stretch">
+			<staticText>
+				<reportElement x="54" y="37" width="436" height="30" uuid="b872d8fa-9722-4a73-815e-71761435d66b"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineStyle="Dashed"/>
+					<leftPen lineStyle="Dashed"/>
+					<bottomPen lineStyle="Dashed"/>
+					<rightPen lineStyle="Dashed"/>
+				</box>
+				<textElement>
+					<font fontName="Bell MT" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Vu la demande de congé introduite par l'intéressé (e) ,il est accordé à]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="85" width="533" height="145" uuid="3cd7751b-01d0-4555-b539-b0358c1a7e4a"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Bell MT" size="12" isItalic="true"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<text><![CDATA[Mr/Mme :                                                                            Fonction : 
+Un congé annuel de : Trente (30) jour consécutifs , du                                         au                                      inclus 
+Au titre de l'exercice : 
+Pour en jouir à  (adresse durand le congé ) :
+L'interessé(e) reprendra son travail me  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="298" width="195" height="20" uuid="efe39c22-bbf0-49f6-8f12-4a21d94be728"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[(*) Rayez la mention unitile ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="85" width="100" height="20" uuid="0dc03943-954f-4347-8950-4c31ae344ae6"/>
+				<textFieldExpression><![CDATA[$F{Nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="85" width="100" height="20" uuid="29f2cbb6-6368-4791-94a4-3ea95a987f19"/>
+				<textFieldExpression><![CDATA[$F{Prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="109" width="100" height="20" uuid="cf8f8f51-c3bf-4a81-8524-300b5f0dcfc1"/>
+				<textFieldExpression><![CDATA[$F{DateDeb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="132" width="100" height="20" uuid="ba74f5a0-cb4e-4a74-8212-9b96ae0030b8"/>
+				<textFieldExpression><![CDATA[$F{Titre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="156" width="100" height="20" uuid="7cc00cbe-1df1-4d5b-a2ff-02f7f4fad0c4"/>
+				<textFieldExpression><![CDATA[$F{Adresse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="180" width="100" height="20" uuid="19d5b29f-8958-49f3-b31a-2250f71c116d"/>
+				<textFieldExpression><![CDATA[$F{DateRet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="109" width="95" height="20" uuid="7e2cfa5c-765f-4fba-b33a-a76b76c29253"/>
+				<textFieldExpression><![CDATA[$F{DateRet}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

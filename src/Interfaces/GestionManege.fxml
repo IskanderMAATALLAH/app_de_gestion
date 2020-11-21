@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="527.0" prefWidth="780.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="297.0">
+               <children>
+                  <VBox prefHeight="286.0" prefWidth="297.0" spacing="5.0" style="-fx-background-color: EAEDF1;">
+                     <children>
+                        <JFXButton buttonType="RAISED" ripplerFill="WHITE" style="-fx-background-color: green;" text="Ajouter nouveau Manége" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0">
+                                 <image>
+                                    <Image url="@../Icons/ajouter.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="40.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXComboBox minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" promptText="-Recherche par-">
+                           <VBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXTextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="249.0" promptText="-Critére-">
+                           <VBox.margin>
+                              <Insets left="25.0" top="5.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox prefHeight="36.0" prefWidth="297.0" spacing="20.0">
+                           <children>
+                              <DatePicker prefHeight="25.0" prefWidth="121.0" promptText="De">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <DatePicker prefHeight="25.0" prefWidth="117.0" promptText="jusqu'au">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="297.0" spacing="30.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" style="-fx-background-color: #3965b8;" text="Rechercher" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" style="-fx-background-color: #3965b8;" text="Actualiser" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ScrollPane prefHeight="540.0" prefWidth="200.0">
+                     <content>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="293.0" spacing="20.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="483.0" style="-fx-background-color: EAEDF1;">
+               <children>
+                  <HBox prefHeight="81.0" prefWidth="483.0" />
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="420.0">
+                     <VBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefHeight="400.0" prefWidth="420.0">
+                           <children>
+                              <HBox prefHeight="127.0" prefWidth="420.0">
+                                 <children>
+                                    <Label text="Nom Manége" textFill="#0a14ab">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="130.0" top="50.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="420.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Etat manége :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="420.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dernière maintenace :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="420.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Périodicité maintenance :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="420.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prochiane maintenance : ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="420.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zone :">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="420.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Remarque : ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="63.0" prefWidth="420.0" spacing="30.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>
